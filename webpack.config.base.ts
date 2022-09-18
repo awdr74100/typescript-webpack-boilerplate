@@ -38,6 +38,15 @@ const config: Configuration = {
           },
         ],
       },
+      {
+        test: /\.(jpe?g|png|gif|webp|svg)$/,
+        type: 'asset',
+        parser: {
+          dataUrlCondition: {
+            maxSize: 10 * 1024, // 10KB
+          },
+        },
+      },
     ],
   },
   resolve: {
